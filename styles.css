@@ -142,3 +142,45 @@ body {
 .recipe__img {
     border-radius: 10px;
 }
+
+.recipe__title {
+  font-family: YoungSerif;
+  font-size: 1.5em;
+  line-height: 100%;
+  font-weight: 400;
+  color: var(--text-primary);
+  padding-block: 1.5rem;
+}
+
+.recipe__description {
+  letter-spacing: 0;
+  font-size: 0.85em;
+}
+
+.recipe__preparation-time {
+  margin-top: 2em;
+  padding: 0.4rem;
+  background-color: #fff7fc;
+  border-radius: 0.2em;
+}
+
+.recipe__preparation-time-heading {
+  color: var(--text-accent);
+  font-weight: 800;
+  font-size: 1em;
+   display: block; /* Ensures the label behaves like a block element */
+  margin-bottom: 0.2em; /* Adds space below the label */
+}
+.recipe__bullet-p {
+  color: var(--text-accent);
+  padding-right: 1em;
+  padding-left: 0.4em;
+}
+.recipe__preparation-step {
+  font-weight: 700;
+  line-height: 170%;
+}
+
+.recipe__ingredients-heading {
+  font-family: YoungSerif;
+}
