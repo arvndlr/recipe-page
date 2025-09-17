@@ -235,6 +235,12 @@ body {
   font-size: 0.89em;
 }
 
+.recipe__instructions ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
 .recipe__nutrition {
   padding-top: 1em;
   width: 100%;
