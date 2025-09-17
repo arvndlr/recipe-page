@@ -58,7 +58,8 @@ ol {
 
 @font-face {
   font-family: "Outfit";
-  src: url("assets/fonts/outfit/static/Outfit-ExtraLight.ttf") format("truetype");
+  src: url("assets/fonts/outfit/static/Outfit-ExtraLight.ttf")
+    format("truetype");
   font-weight: 200;
   font-style: normal;
 }
@@ -106,69 +107,77 @@ ol {
 }
 
 :root {
-    --surface: #fefcfe;
-    --bg-color: #f3e5d8;
-    --text-primary: #1c1b19;
-    --text-secondary: #855448;
-    --text-accent: #8c5971;
+  --surface: #fefcfe;
+  --bg-color: #f3e5d8;
+  --text-primary: #1c1b19;
+  --text-secondary: #855448;
+  --text-sub: #3d3535;
+  --text-accent: #8c5971;
 }
 
 body {
-    background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    margin: 100px auto 0;
-    align-items: center;
-    font-family: Outfit;
-    font-size: 16px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 100px;
+  align-items: center;
+  font-family: Outfit;
+  font-size: 18px;
 }
 
 .recipe {
-    background-color: #fefcfe;
-    max-width: 610px;
-    border-radius: 15px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #fefcfe;
+  max-width: 665px;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .recipe__details {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .recipe__img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
-
+.recipe__img-mbl {
+  display: none;
+}
 .recipe__title {
   font-family: YoungSerif;
   font-size: 1.5em;
   line-height: 100%;
   font-weight: 400;
   color: var(--text-primary);
-  padding-block: 1.5rem;
+  padding-block: 1rem;
 }
 
 .recipe__description {
   letter-spacing: 0;
   font-size: 0.85em;
+  font-weight: 300;
+  margin-bottom: 0.2em;
 }
 
 .recipe__preparation-time {
-  margin-top: 2em;
-  padding: 0.4rem;
+  padding: 1rem;
   background-color: #fff7fc;
   border-radius: 0.2em;
+}
+
+.recipe__preparation-time ol li {
+  font-weight: 300;
 }
 
 .recipe__preparation-time-heading {
   color: var(--text-accent);
   font-weight: 800;
   font-size: 1em;
-   display: block; /* Ensures the label behaves like a block element */
+  display: block; /* Ensures the label behaves like a block element */
   margin-bottom: 0.2em; /* Adds space below the label */
 }
 .recipe__bullet-p {
@@ -176,11 +185,91 @@ body {
   padding-right: 1em;
   padding-left: 0.4em;
 }
-.recipe__preparation-step {
-  font-weight: 700;
+.recipe__step {
+  font-weight: 600;
   line-height: 170%;
+  color: var(--text-sub);
 }
 
-.recipe__ingredients-heading {
+.recipe__ingredients {
+  border-bottom: 1px solid rgba(56, 56, 55, 0.16);
+  padding-block: 1em;
+}
+
+.recipe__heading {
   font-family: YoungSerif;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.recipe__ingredients ul {
+  display: block;
+  margin-top: 1em;
+  padding-inline: 0.2em;
+}
+
+.recipe__bullet-i {
+  color: var(--text-secondary);
+  padding-right: 1em;
+}
+
+.recipe__ingredients ul li {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.recipe__instructions {
+  border-bottom: 1px solid rgba(56, 56, 55, 0.16);
+  padding-block: 1em;
+}
+
+.recipe__instruction-num {
+  color: var(--text-secondary);
+  font-weight: 700;
+  padding-right: 1em;
+}
+
+.recipe__instructions ol li {
+  font-weight: 300;
+  font-size: 0.89em;
+}
+
+.recipe__nutrition {
+  padding-top: 1em;
+  width: 100%;
+}
+
+.recipe__nutrition-table {
+  width: 100%;
+}
+
+.recipe__nutrition-table tr:not(:last-child) td {
+  border-bottom: 1px solid #ccc; /* Customize color and thickness */
+}
+
+.recipe__nutrition-table tr {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.weights {
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.recipe__nutrition-table td {
+  padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .recipe__img {
+    display: none;
+  }
+  .recipe__img-mbl {
+    display: block;
+  }
+  body {
+    margin-top: 0;
+  }
 }
